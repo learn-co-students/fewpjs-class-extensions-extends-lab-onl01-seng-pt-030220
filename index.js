@@ -24,15 +24,17 @@ class Triangle  extends Polygon {
     get isValid()
     {
 
-      return  this._countSides == 3 ? true:false
+      return  ((this.sides[0] + this.sides[1]) > (this.sides[2]) && (this.sides[0] + this.sides[2]) > this.sides[1] &&
+       (this.sides[1] + this.sides[2]) > this.sides[0] && (this.sides[0] + this.sides[2]) > this.sides[1])
+
     }
 
     get perimeter() {
-       if (typeof(this._countSides) === "object")
+       if (typeof(this.sides) === "object")
        {
-       return this._countSides = this._countSides.reduce((acc,element) =>acc+element)
+        return this.sides = this.sides.reduce((acc,element) =>acc+element)
        }else{
-        return this._countSides = this._countSides * 5
+        return this.sides= this.sides * 5
        }
 
     }
@@ -45,12 +47,12 @@ class Triangle  extends Polygon {
 
     get isValid()
     {
-      return  this. _countSides == 4 ? true:false
+      return  ((this.sides[0] == this.sides[1]) && (this.sides[2] == this.sides[3]) &&
+       (this.sides[0] == this.sides[3]))
     }
 
     get area() {
-
-      return this._countSides = this._countSides[0] * this._countSides[1]
+      return this.sides = this.sides[0] * this.sides[1]
     }
 
 

@@ -3,16 +3,16 @@
 class Polygon {
 
     constructor(sides){
-      this._sides = sides
+      this.sides = sides
       this.count =this.sides.length
     }
 
     get countSides(){
-      return this._countSides = (this._countSides).length
+      return (this.sides).length
     }
 
     get perimeter() {
-      return this._countSides = this._countSides.reduce((acc,element) =>acc+element)
+      return this.sides = this.sides.reduce((acc,element) =>acc+element)
     }
 
 }

@@ -24,7 +24,7 @@ class Triangle  extends Polygon {
     get isValid()
     {
 
-      return  this. _countSides == 3 ? true:false
+      return  this._countSides == 3 ? true:false
     }
 
     get perimeter() {

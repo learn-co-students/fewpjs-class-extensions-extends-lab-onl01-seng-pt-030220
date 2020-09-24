@@ -12,7 +12,7 @@ class Polygon {
       return this.array.reduce(((sum, side) => sum + side), 0)
     }
   }
-
+ 
   class Triangle extends Polygon {
     get isValid(){
         let arr = this.array;

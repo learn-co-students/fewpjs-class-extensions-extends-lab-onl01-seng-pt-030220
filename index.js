@@ -11,9 +11,7 @@ class Polygon{
         const sum = this.side.reduce(add);
         return sum;
     }
-
 }
-
 class Triangle extends Polygon{
      get isValid() {
         let side1 = this.side[0];
@@ -22,7 +20,6 @@ class Triangle extends Polygon{
         return (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1)
     }
 }
-
 class Square extends Polygon{
     get isValid(){
         let side1 = this.side[0];
@@ -35,3 +32,4 @@ class Square extends Polygon{
         return (this.side[0] * this.side[1]);
     }
 }
+

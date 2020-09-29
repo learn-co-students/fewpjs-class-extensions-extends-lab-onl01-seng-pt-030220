@@ -24,6 +24,7 @@ class Triangle extends Polygon{
       let sideA = this.arr[0]
       let sideB = this.arr[1]
       let sideC = this.arr[2]
+
       if (sideA + sideB > sideC && sideB + sideC > sideA && sideC + sideA > sideB){
         return true
       } else {
@@ -43,30 +44,16 @@ class Square extends Polygon{
       let sideB = this.arr[1]
       let sideC = this.arr[2]
       let sideD = this.arr[3]
+
       if (sideA === sideB && sideC === sideD && sideB === sideC){
         return true
       } else{
         return false
       }
     }
-
   }
 
   get area(){
     return this.arr[0] * this.arr[2]
   }
 }
-
-
-
-// let a = new Polygon([2,4,6])
-// a.countSides
-// a.perimeter
-// let b = new Triangle([1,3,3])
-// b.isValid
-// b.countSides
-// b.perimeter
-let c = new Square([4,4,4,4])
-console.log(c.isValid)
-// c.countSides
-// c.perimeter

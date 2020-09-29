@@ -8,6 +8,12 @@ class Polygon{
   }
 
   get perimeter(){
+    if (!Array.isArray(this.arr)) return;
+
+    // let per = 0;
+    // for (let num of this.arr){
+    //   per += num
+    // }
     let per = this.arr.reduce((a,b)=>{
       return a + b
     }, 0)
@@ -20,6 +26,8 @@ class Polygon{
 class Triangle extends Polygon{
 
   get isValid(){
+    if (!Array.isArray(this.arr)) return;
+
     if (this.countSides === 3){
       let sideA = this.arr[0]
       let sideB = this.arr[1]
@@ -39,6 +47,8 @@ class Triangle extends Polygon{
 class Square extends Polygon{
 
   get isValid(){
+    if (!Array.isArray(this.arr)) return;
+
     if (this.countSides === 4){
       let sideA = this.arr[0]
       let sideB = this.arr[1]
@@ -54,6 +64,7 @@ class Square extends Polygon{
   }
 
   get area(){
+    if (!Array.isArray(this.arr) && this.countSides !== 4) return;
     return this.arr[0] * this.arr[2]
   }
 }
